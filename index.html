@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أرسل لي رسالة</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      color: #333;
+      min-height: 100vh;
+    }
+    .topbar {
+      width: 100%;
+      background-color: #00bcd4;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .topbar-content {
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'Cairo', sans-serif;
+    }
+    .main-content {
+      margin-top: 80px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
+      border: 3px solid #00bcd4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #00bcd4;
+    }
+    textarea {
+      width: 90%;
+      height: 120px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 16px;
+      resize: none;
+    }
+    button {
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00a3b2;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-content">صراحة</div>
+  </div>
+  <div class="main-content">
+    <div class="profile-pic">👤</div>
+    <h2>أرسل لي رسالة صادقة 🐣</h2>
+    <form action="/submit" method="post">
+      <textarea name="message" placeholder="اكتب رسالتك هنا..."></textarea><br>
+      <button type="submit">أرسلها الآن 💬</button>
+    </form>
+  </div>
+</body>
+</html>

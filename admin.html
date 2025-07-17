@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم</title>
+</head>
+<body>
+    <h2>📋 الرسائل المستلمة</h2>
+    <a href="/logout">تسجيل الخروج</a>
+    <ul>
+        {% for msg in messages %}
+            <li>
+                <p><strong>📩 الرسالة:</strong> {{ msg.text }}</p>
+                <p><strong>🕒 الوقت:</strong> {{ msg.time }}</p>
+                <p><strong>🌐 IP:</strong> {{ msg.ip }}</p>
+                <p><strong>📱 الجهاز:</strong> {{ msg.device }}</p>
+                <p><strong>📍 الموقع:</strong> {{ msg.location }}</p>
+                <hr>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
